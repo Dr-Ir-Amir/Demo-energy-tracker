@@ -7,33 +7,48 @@ export default function Sidebar() {
 
   return (
     <aside className="sidebar">
-      <div className="sidebar-brand">
-        <span className="sb-icon">⚡</span>
-        <span className="sb-name">EnergyTrack</span>
+      {/* User Profile */}
+      <div className="sidebar-profile">
+        <div className="profile-avatar">{user?.username?.[0]?.toUpperCase()}</div>
+        <div className="profile-info">
+          <span className="profile-name">{user?.username}</span>
+          <span className="profile-email">{user?.email || 'user@smatics.com'}</span>
+        </div>
       </div>
 
-      <nav className="sidebar-nav">
+      {/* Search */}
+      <div className="sidebar-search">
+        <span className="search-icon">🔍</span>
+        <input type="text" placeholder="Search" readOnly />
+      </div>
+
+      {/* Main Menu */}
+      <div className="nav-group">
+        <span className="nav-group-label">Main Menu</span>
         <NavLink to="/dashboard" end className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span>📊</span> Dashboard
+          <span className="nav-icon">📊</span> Dashboard
         </NavLink>
         <NavLink to="/dashboard/upload" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span>📁</span> Upload CSV
+          <span className="nav-icon">📁</span> Upload CSV
         </NavLink>
+      </div>
+
+      {/* Records */}
+      <div className="nav-group">
+        <span className="nav-group-label">Records</span>
         <NavLink to="/dashboard/analytics" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span>📈</span> Analytics
+          <span className="nav-icon">📈</span> Analytics
         </NavLink>
         <NavLink to="/dashboard/export" className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}>
-          <span>💾</span> Export
+          <span className="nav-icon">💾</span> Export
         </NavLink>
-      </nav>
-
-      <div className="sidebar-footer">
-        <div className="user-info">
-          <div className="user-avatar">{user?.username?.[0]?.toUpperCase()}</div>
-          <span className="user-name">{user?.username}</span>
-        </div>
-        <button className="btn-logout" onClick={logout}>Logout</button>
       </div>
+
+      <div className="sidebar-spacer"></div>
+
+      <button className="btn-logout" onClick={logout}>
+        <span>🚪</span> Logout
+      </button>
     </aside>
   );
 }

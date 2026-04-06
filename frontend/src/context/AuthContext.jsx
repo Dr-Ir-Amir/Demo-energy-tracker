@@ -12,9 +12,14 @@ export function AuthProvider({ children }) {
     if (token) {
       auth.me()
         .then((res) => setUser(res.data))
-        .catch(() => localStorage.clear())
+        .catch(() => {
+          localStorage.removeItem('access_token');
+          localStorage.removeItem('refresh_token');
+        })
         .finally(() => setLoading(false));
     } else {
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('refresh_token');
       setLoading(false);
     }
   }, []);

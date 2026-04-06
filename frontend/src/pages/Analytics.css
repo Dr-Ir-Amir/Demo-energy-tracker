@@ -1,8 +1,28 @@
-.analytics-page { max-width: 1200px; }
+.analytics-page { max-width: 1100px; }
 
-.analytics-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+.analytics-filter {
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
+
+.a-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 16px;
+}
+
+.a-card-header { margin-bottom: 8px; }
+.a-card-header h3 { margin: 0; font-size: 15px; font-weight: 600; color: #0f172a; }
+
+.anomaly { border-left: 4px solid #f59e0b; }
+.anomaly-info { color: #64748b; font-size: 13px; margin: 0 0 12px; }
+
+.spike-list { display: flex; flex-direction: column; gap: 6px; }
+.spike-item {
+  display: flex; justify-content: space-between;
+  padding: 10px 14px; background: #fffbeb; border-radius: 10px; font-size: 13px;
+}
+.spike-val { font-weight: 700; color: #d97706; }

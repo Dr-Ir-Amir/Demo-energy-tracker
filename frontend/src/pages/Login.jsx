@@ -1,6 +1,7 @@
- import { useState } from 'react';
+import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router';
+import loginImg from '../assets/login.jpg';
 import './Login.css';
 
 export default function Login() {
@@ -46,7 +47,7 @@ export default function Login() {
           <div className="login-form-wrapper">
             <div className="brand">
               <div className="brand-icon">⚡</div>
-              <span className="brand-name">EnergyTrack</span>
+              <span className="brand-name">SMATICS</span>
             </div>
 
             <h1 className="welcome-title">Welcome Back!</h1>
@@ -94,40 +95,33 @@ export default function Login() {
               🧪 Use Demo Account
             </button>
 
-            <p className="footer-text">© 2026 EnergyTrack. Sustainability Dashboard.</p>
+            <p className="footer-text">© 2026 SMATICS. Sustainability Dashboard.</p>
           </div>
         </div>
 
-        {/* Right Panel - Energy Visual */}
+        {/* Right Panel - Login Image */}
         <div className="login-right">
-          <div className="energy-visual">
-            <div className="energy-grid">
-              <div className="energy-orb orb-1"></div>
-              <div className="energy-orb orb-2"></div>
-              <div className="energy-orb orb-3"></div>
-              <div className="energy-pulse"></div>
-            </div>
-            <div className="right-overlay">
-              <div className="metric-cards">
-                <div className="mini-card">
-                  <span className="mini-icon">☀️</span>
-                  <div><div className="mini-val">42.8 kWh</div><div className="mini-label">Solar Today</div></div>
-                </div>
-                <div className="mini-card">
-                  <span className="mini-icon">🔌</span>
-                  <div><div className="mini-val">156.3 kWh</div><div className="mini-label">Grid Usage</div></div>
-                </div>
-                <div className="mini-card">
-                  <span className="mini-icon">🌿</span>
-                  <div><div className="mini-val">27.4%</div><div className="mini-label">Renewable</div></div>
-                </div>
-                <div className="mini-card">
-                  <span className="mini-icon">📉</span>
-                  <div><div className="mini-val">18.2 kg</div><div className="mini-label">CO₂ Saved</div></div>
-                </div>
+          <img src={loginImg} alt="Energy monitoring" className="login-image" />
+          <div className="right-overlay">
+            <div className="metric-cards">
+              <div className="mini-card">
+                <span className="mini-icon">☀️</span>
+                <div><div className="mini-val">42.8 kWh</div><div className="mini-label">Solar Today</div></div>
               </div>
-              <p className="right-tagline">Real-time energy intelligence<br/>for a sustainable future</p>
+              <div className="mini-card">
+                <span className="mini-icon">🔌</span>
+                <div><div className="mini-val">156.3 kWh</div><div className="mini-label">Grid Usage</div></div>
+              </div>
+              <div className="mini-card">
+                <span className="mini-icon">🌿</span>
+                <div><div className="mini-val">27.4%</div><div className="mini-label">Renewable</div></div>
+              </div>
+              <div className="mini-card">
+                <span className="mini-icon">📉</span>
+                <div><div className="mini-val">18.2 kg</div><div className="mini-label">CO₂ Saved</div></div>
+              </div>
             </div>
+            <p className="right-tagline">Real-time energy intelligence<br/>for a sustainable future</p>
           </div>
         </div>
       </div>

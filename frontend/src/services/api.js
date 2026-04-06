@@ -52,7 +52,7 @@ export const analytics = {
   trends: (params) => API.get('/analytics/trends/', { params }),
   anomalies: () => API.get('/analytics/anomalies/'),
   exportCSV: (params) => API.get('/analytics/export/csv/', { params, responseType: 'blob' }),
-  exportPDF: () => API.get('/analytics/export/pdf/', { responseType: 'blob' }),
+  exportPDF: (data) => API.post('/analytics/export/pdf/', data, { responseType: 'blob', headers: { 'Content-Type': 'application/json' } }),
 };
 
 export default API;
