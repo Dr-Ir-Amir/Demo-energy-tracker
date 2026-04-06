@@ -1,0 +1,29 @@
+.export-page { max-width: 700px; }
+
+.export-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.export-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.export-icon { font-size: 40px; margin-bottom: 16px; }
+.export-card h3 { margin: 0 0 8px; font-size: 18px; color: #0f172a; }
+.export-card p { color: #64748b; font-size: 13px; margin: 0 0 20px; }
+
+.btn-export {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-export.pdf { background: linear-gradient(135deg, #f59e0b, #f97316); }
+.btn-export:disabled { opacity: 0.5; cursor: not-allowed; }

@@ -1,0 +1,65 @@
+.upload-page { max-width: 700px; }
+
+.page-title { font-size: 26px; font-weight: 700; color: #0f172a; margin: 0 0 4px; }
+.page-sub { color: #64748b; font-size: 14px; margin: 0 0 28px; }
+
+.upload-zone {
+  border: 2px dashed #cbd5e1;
+  border-radius: 16px;
+  padding: 48px 24px;
+  text-align: center;
+  background: #fff;
+  transition: border-color 0.2s;
+  margin-bottom: 20px;
+}
+
+.upload-zone:hover { border-color: #0ea5e9; }
+.upload-icon { font-size: 40px; margin-bottom: 12px; }
+.upload-zone p { color: #64748b; font-size: 14px; margin: 0 0 12px; }
+
+.file-label {
+  display: inline-block;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.file-name { color: #0ea5e9; font-weight: 600; margin-top: 12px; }
+
+.btn-upload {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0ea5e9, #3b82f6);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.btn-upload:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.upload-error { background: #fef2f2; color: #dc2626; padding: 14px; border-radius: 12px; font-size: 14px; margin-bottom: 16px; }
+
+.upload-success { background: #f0fdf4; color: #16a34a; padding: 14px; border-radius: 12px; font-size: 14px; margin-bottom: 16px; }
+.cols-detected { font-size: 12px; color: #64748b; margin-top: 8px; }
+
+.upload-history { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.upload-history h3 { margin: 0 0 16px; font-size: 16px; color: #0f172a; }
+
+.history-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+.hist-name { color: #0f172a; font-weight: 500; }
+.hist-rows { color: #0ea5e9; font-weight: 600; }
+.hist-date { color: #94a3b8; font-size: 13px; }
